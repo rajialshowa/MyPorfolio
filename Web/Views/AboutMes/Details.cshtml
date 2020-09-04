@@ -1,0 +1,32 @@
+﻿@model Core.Entities.AboutMe
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_AdminLayout";
+}
+<div style="padding:160px;">
+    <h1>Details</h1>
+
+    <div>
+        <h4>AboutMe</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                Left Section
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Section1)
+            </dd>
+            <dt class="col-sm-2">
+                Right Section
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Section2)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" class="btn btn-dark" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index" class="btn btn-outline-dark">Back to List</a>
+    </div>
+</div>
